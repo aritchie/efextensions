@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <Authors>aritchie</Authors>
+        <Owners>aritchie</Owners>
+        <Company />
+        <Product>ACR Entity Framework Core Extensions</Product>
+        <Description>ACR Entity Framework Core Extensions</Description>
+        <LangVersion>8.0</LangVersion>
+        <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>acr ef data</PackageTags>
+        <PackageProjectUrl>https://github.com/aritchie/efextensions</PackageProjectUrl>
+        <PackageReleaseNotes></PackageReleaseNotes>
+        <Version>3.0.0</Version>
+        <Product>$(AssemblyName) ($(TargetFramework))</Product>
+        <RepositoryUrl>https://github.com/aritchie/efextensions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <EnableSourceLink Condition=" '$(Configuration)' == 'Release' AND '$(OS)' == 'Windows_NT' AND '$(MSBuildRuntimeType)' == 'Core' ">true</EnableSourceLink>
+        <EnableSourceControlManagerQueries>$(EnableSourceLink)</EnableSourceControlManagerQueries>
+        <IncludeSymbols>True</IncludeSymbols>
+        <IncludeSource>True</IncludeSource>
+        <PublishRepositoryUrl>True</PublishRepositoryUrl>
+        <EmbedUntrackedSources>True</EmbedUntrackedSources>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.0.0" />
+        <PackageReference Include="System.Reactive" Version="4.1.6" />
+    </ItemGroup>
+
+    <ItemGroup Condition=" '$(SourceLinkEnabled)' == 'true' ">
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19367-01" PrivateAssets="All" />
+    </ItemGroup>
+
+</Project>
